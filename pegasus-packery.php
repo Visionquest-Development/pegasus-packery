@@ -20,7 +20,7 @@ Domain Path: /languages
 	}
 
 	function pegasus_packery_menu_item() {
-		add_menu_page("Packery", "Packery", "manage_options", "pegasus_packery_plugin_options", "pegasus_packery_plugin_settings_page", null, 99);
+		//add_menu_page("Packery", "Packery", "manage_options", "pegasus_packery_plugin_options", "pegasus_packery_plugin_settings_page", null, 99);
 		
 	}
 	add_action("admin_menu", "pegasus_packery_menu_item");
