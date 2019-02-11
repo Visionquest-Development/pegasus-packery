@@ -49,11 +49,11 @@ Domain Path: /languages
 		//wp_enqueue_script( 'one-page-scroll-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/jquery.onepage-scroll.js', array( 'jquery' ), null, true );
 		//wp_enqueue_script( 'snap-scroll-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/jquery.snapscroll.js', array( 'jquery' ), null, true );
 		//wp_enqueue_script( 'scrollspy-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/scrollspy.js', array( 'jquery' ), null, true );
-		
-		wp_enqueue_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, true );
-		
-		wp_enqueue_script( 'packery-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/packery.js', array( 'jquery' ), null, true );
-		wp_enqueue_script( 'pegasus-packery-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, true );
+
+		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, 'all' );
+
+		wp_register_script( 'packery-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/packery.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-packery-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, 'all' );
 		
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_packery_plugin_js' );
@@ -73,7 +73,12 @@ Domain Path: /languages
 				$output .= '<div id="packery-grid" class="" >';
 					$output .=   do_shortcode($content);
 				$output .= '</div><br clear="all">';
-			
+
+			//wp_enqueue_style( 'slick-theme-css' );
+			wp_enqueue_script( 'images-loaded-js' );
+			wp_enqueue_script( 'packery-js' );
+			wp_enqueue_script( 'pegasus-packery-plugin-js' );
+
 			return $output; 
 		}
 		add_shortcode( 'packery', 'pegasus_packery_func' );
