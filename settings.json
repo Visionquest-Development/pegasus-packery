@@ -1,0 +1,16 @@
+{
+  "rows": [
+    {
+      "section_name": "Packery Settings",
+      "rows": [
+        {
+          "name": "Class",
+          "attribute": "class",
+          "options": "Any class name",
+          "description": "Add a class to the packery container",
+          "example": "class=\"test\""
+        }
+      ]
+    }
+  ]
+}
