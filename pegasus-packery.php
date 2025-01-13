@@ -241,7 +241,7 @@ Domain Path: /languages
 		wp_register_script( 'images-loaded-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/imagesLoaded.js', array( 'jquery' ), null, 'all' );
 
 		wp_register_script( 'packery-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/packery.js', array( 'jquery' ), null, 'all' );
-		wp_register_script( 'pegasus-packery-plugin-js', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/plugin.js', array( 'jquery' ), null, 'all' );
+		wp_register_script( 'pegasus-packery-plugin', trailingslashit( plugin_dir_url( __FILE__ ) ) . 'js/pegasus-packery-plugin.js', array( 'jquery' ), null, 'all' );
 
 	} //end function
 	add_action( 'wp_enqueue_scripts', 'pegasus_packery_plugin_js' );
@@ -252,20 +252,26 @@ Domain Path: /languages
 	// [packery ] content [/packery]
 		function pegasus_packery_func( $atts, $content = null ) {
 			$a = shortcode_atts( array(
-				'id' => '',
+				//'id' => '',
 				'class' => ''
 			), $atts );
 
+			if ( !empty( $a['class'] ) ) {
+				$class = $a['class'];
+			} else {
+				$class = '';
+			}
+
 			$output = '';
 
-				$output .= '<div id="packery-grid" class="" >';
+				$output .= '<div class="packery-grid ' . $class .  ' " >';
 					$output .=   do_shortcode($content);
-				$output .= '</div><br clear="all">';
+				$output .= '</div>';
 
 			//wp_enqueue_style( 'slick-theme-css' );
 			wp_enqueue_script( 'images-loaded-js' );
 			wp_enqueue_script( 'packery-js' );
-			wp_enqueue_script( 'pegasus-packery-plugin-js' );
+			wp_enqueue_script( 'pegasus-packery-plugin' );
 
 			return $output;
 		}
