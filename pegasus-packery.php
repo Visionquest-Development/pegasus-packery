@@ -122,24 +122,24 @@ Domain Path: /languages
 				<h3>Packery Usage 1:</h3>
 
 				<pre >[packery]<?php echo htmlspecialchars('
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/250/">
-	<img src="https://via.placeholder.com/250/500/">'); ?>
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/abarth.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Acura.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/alfaromeo.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Aston-Martin.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Audi.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/bentley.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/BMW.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Buick.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Cadillac.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/Chevrolet.png">
+	<img src="http://pegasustheme.com/wp-content/uploads/2025/01/chrysler.png">'); ?>
 
 [/packery]</pre>
 
 				<input
 					type="text"
 					readonly
-					value="<?php echo esc_html('[packery]<img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/250/"><img src="https://via.placeholder.com/250/500/">[/packery]'); ?>"
+					value="<?php echo esc_html('[packery]<img src="http://pegasustheme.com/wp-content/uploads/2025/01/abarth.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Acura.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/alfaromeo.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Aston-Martin.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Audi.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/bentley.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/BMW.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Buick.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Cadillac.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/Chevrolet.png"><img src="http://pegasustheme.com/wp-content/uploads/2025/01/chrysler.png">[/packery]'); ?>"
 					class="regular-text code"
 					id="my-shortcode"
 					onClick="this.select();"
